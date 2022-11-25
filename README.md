@@ -1,7 +1,7 @@
 # Plasma-fluid-equations
 Work surrounding plasma fluid equations.
 
-Attempt to work out the initial time-evolution of a blob in the limit of small diamagnetic drift (NB not same limit as examples run so far).
+Attempt to work out the initial time-evolution of a blob in the limit of small diamagnetic drift (NB not same limit as examples run so far).  The author acknowledges significant help from Dr John Omotani of UKAEA.
 
 The plasma fluid equations for the simplest Hermes-3 example, called blob2d, are, in the plane (here $e=1$)
 
