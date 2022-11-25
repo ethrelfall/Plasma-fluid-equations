@@ -44,7 +44,7 @@ Note that the complementary function solutions are not promising, being multiple
 
 There follow some analytic results for some plausible blob initial conditions.
 
-1. Gaussian blob $n_0 = e^{-\frac{r^2}{2 r_0^2}}$:
+1. Gaussian blob $n_0 = e^{-\frac{r^2}{2 r_0^2}}$
 
 A particular integral of the Poisson equation is
 
