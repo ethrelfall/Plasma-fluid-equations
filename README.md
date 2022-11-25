@@ -11,7 +11,7 @@ $$
 \nabla^2 \phi = B^2 \omega.
 $$
 
-Expanding about a circularly-symmetric initial solution $n=n_0 + \epsilon n_1$, $\omega = \epsilon \omega_1$, $\phi = \epsilon \phi_1$ one has, where all quantities are the first order ones (subscript dropped) except $n_0$, and the prime is radial derivative,
+Expanding about a circularly-symmetric initial solution $n_0$ using $n=n_0 + \epsilon n_1$, $\omega = \epsilon \omega_1$, $\phi = \epsilon \phi_1$ one has, where all quantities are the first order ones (subscript dropped) except $n_0$, and the prime is radial derivative,
 
 ```math
 \dot{n} + \frac{n_0'}{Br} \frac{\partial \phi}{\partial \varphi} = \frac{n_0 \phi}{L};
@@ -40,7 +40,7 @@ One can work this out for plausible circularly-symmetric blob initial states (no
 \phi''+\frac{1}{r} \phi' - \frac{1}{r^2} \phi = B^2 n_0'.
 ```
 
-Note that the complementary function solutions are not promising, being multplies of $\frac{1}{r}$ and $r$, so assume in the first instance that the particular integrals represent the actual perturbation (but see Gaussian case below!).
+Note that the complementary function solutions are not promising, being multiples of $\frac{1}{r}$ and $r$, but the reciprocal one can be added to cancel poles in the particular integral terms.
 
 There follow some analytic results for some plausible blob initial conditions.
 
@@ -60,10 +60,10 @@ The pole at $r=0$ can be dealt with by adding a multiple of the $\frac{1}{r}$ pi
 
 2. Lorentzian blob $n_0 = \frac{1}{1+\frac{r^2}{r_0^2}}$
 
-The potential solves to
+The potential solves to (again, cancelling any pole with a multiple of $\frac{1}{r}$)
 
 ```math
-\phi = - \frac{r_0^2 B^2 \ln(r_0^2+r^2)}{2 r}
+\phi = - \frac{r_0^2 B^2 \ln(1+\frac{r^2}{r_0^2})}{2 r}
 ```
 
 3. Poeschl-Teller blob $n_0 = \mathrm{sech}^2 \left ( \frac{r}{r_0} \right )$
@@ -76,6 +76,19 @@ $$
 
 The quadratic term $n = n^{(2)}t^2$ is easily computed from these using the formula from above $n^{(2)} = \frac{1}{2} \left ( \frac{n_0 \phi^{(1)}}{L} - \frac{n_0'}{Br} \frac{\partial \phi^{(1)}}{\partial \varphi} \right )$.  In each case there is a term $\propto \sin \varphi$ and a term $\propto \cos \varphi$.
 
+There follow some plots showing the density evolution.  Note the plots are **not** in the small diamagnetic drift limit and they show the nonlinear evolution of the state.  All based on the blob2d example in Hermes-3 with the only mod being the initial data.  Note the Lorentzian and Poeschl-Teller cases evolve more quickly than the Gaussian, probably because they are less compact.  All scale lengths are $r_0=0.05$ and the domain is the unit square (as in original Hermes-3 example).
 
+**Gaussian initial condition output**
 
+![Gaussian_blob](png/blob2d_Gaussian.png "Time-evolution of Gaussian density blob in Hermes-3.")
+
+Note this is different to the Hermes-3 Gaussian.
+
+**Lorentzian initial condition output**
+
+![Lorentzian_blob](png/blob2d_Lorentzian.png "Time-evolution of Lorentzian density blob in Hermes-3.")
+
+**Poeschl-Teller initial condition output**
+
+![PoeschlTeller_blob](png/blob2d_PoeschlTeller.png "Time-evolution of Poeschl-Teller density blob in Hermes-3.")
 
