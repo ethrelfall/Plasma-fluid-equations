@@ -76,7 +76,7 @@ $$
 
 The quadratic term $n = n^{(2)}t^2$ is easily computed from these using the formula from above $n^{(2)} = \frac{1}{2} \left ( \frac{n_0 \phi^{(1)}}{L} - \frac{n_0'}{Br} \frac{\partial \phi^{(1)}}{\partial \varphi} \right )$.  In each case there is a term $\propto \sin \varphi$ and a term $\propto \cos \varphi$.
 
-There follow some plots showing the density evolution.  Note the plots are **not** in the small diamagnetic drift limit and they show the nonlinear evolution of the state.  All based on the blob2d example in Hermes-3 with the only mod being the initial data.  Note the Lorentzian and Poeschl-Teller cases evolve more quickly than the Gaussian, probably because they are less compact.  All scale lengths are $r_0=0.05$ and the domain is the unit square (as in original Hermes-3 example).
+There follow some plots showing the density evolution.  Note the plots are **not** in the small diamagnetic drift limit and they show the nonlinear evolution of the state.  All based on the blob2d example in Hermes-3 with the only mod being the initial data.  Note the Lorentzian and Poeschl-Teller cases evolve more quickly than the Gaussian, probably because ???.  All scale lengths are $r_0=0.05$ and the domain is the unit square (as in original Hermes-3 example).
 
 **Gaussian initial condition output**
 
