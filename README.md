@@ -27,8 +27,36 @@ n = n^{(1)} t + n^{(2)} t^2;
 One sees immediately $n^{(1)} = 0$ and the initial time evolution of $n^{(2)}$ can be determined by solving
 
 ```math
-\omega^{(1)} = n_0' \sin \varphi
+\omega^{(1)} = n_0' \sin \varphi;
+\nabla^2 \phi^{(1)} = B^2 n_0' \sin \varphi;
+n^{(2)} = \frac{1}{2} \left ( \frac{n_0 \phi^{(1)}}{L} - \frac{n_0'}{Br} \frac{\partial \phi^{(1)}}{\partial \varphi} \right ).
 ```
+
+One can work this out for plausible circularly-symmetric blob initial states (now dropping the superscripts, and assuming $\phi \propto \sin \varphi$).  The main step is evaluation of the potential from the Poisson equation
+
+```math
+\phi''+\frac{1}{r} \phi' - \frac{1}{r^2} \phi = B^2 n_0'.
+```
+
+Note that the complementary function solutions are not promising, being multplies of $\frac{1}{r}$ and $r$, so assume the particular integrals represent the actual perturbation.
+
+1. Gaussian blob $n_0 = e^{-\frac{r^2}{2 r_0^2}}$:
+
+This is a pain because the Poisson equation solves to
+
+```math
+\phi = \frac{r_0^2 B^2 e^{-\frac{r^2}{2 r_0^2}}}{r}
+```
+
+i.e. singular at the origin!
+
+2. Lorentzian blob $n_0 = \frac{1}{1+\frac{r^2}{r_0^2}}$
+
+
+
+3. Poeschl-Teller blob $n_0 = \mathrm{sech}^2 \left ( \frac{r}{r_0} \right )$
+
+
 
 
 
