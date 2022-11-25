@@ -1,18 +1,20 @@
 # Plasma-fluid-equations
-Work surrounding plasma fluid equations
+Work surrounding plasma fluid equations.
+
+Attempt to work out the initial time-evolution of a blob in the limit of small diamagnetic drift (NB not same limit as examples run so far).
 
 The plasma fluid equations for the simplest Hermes-3 example, called blob2d, are, in the plane (here $e=1$)
 
 $$
 \dot{n} - \frac{1}{B} \left ( \frac{\partial \phi}{\partial x} \frac{\partial n}{\partial y} - \frac{\partial \phi}{\partial y} \frac{\partial n}{\partial x} \right ) = \frac{n \phi}{L};\\
-\dot{\omega} - \frac{1}{B} \left ( \frac{\partial \phi}{\partial x} \frac{\partial \omega}{\partial y} - \frac{\partial \phi}{\partial y} \frac{\partial \omega}{\partial x} \right ) = \epsilon  \frac{\partial n}{\partial y} \frac{n \phi}{L};\\
+\dot{\omega} - \frac{1}{B} \left ( \frac{\partial \phi}{\partial x} \frac{\partial \omega}{\partial y} - \frac{\partial \phi}{\partial y} \frac{\partial \omega}{\partial x} \right ) = \epsilon  \frac{\partial n}{\partial y} + \frac{n \phi}{L};\\
 \nabla^2 \phi = B^2 \omega.
 $$
 
-Expanding about a circularly-symmetric initial solution $n=n_0 + \epsilon n_1$, $\omega = \epsilon \omega_1$, $\phi = epsilon \phi_1$ one has, where all quantities are the first order ones (subscript dropped) except $n_0$, and the prime is radial derivative,
+Expanding about a circularly-symmetric initial solution $n=n_0 + \epsilon n_1$, $\omega = \epsilon \omega_1$, $\phi = \epsilon \phi_1$ one has, where all quantities are the first order ones (subscript dropped) except $n_0$, and the prime is radial derivative,
 
 ```math
-\dot{n} + \frac{n_0'}{Br} = \frac{n_0 \phi}{L};
+\dot{n} + \frac{n_0'}{Br} \frac{\partial \phi}{\partial \varphi} = \frac{n_0 \phi}{L};
 \dot{\omega} = n_0' \sin \varphi + \frac{n_0 \phi}{L};
 \nabla^2 \phi = B^2 \omega.
 ```
@@ -39,6 +41,8 @@ One can work this out for plausible circularly-symmetric blob initial states (no
 ```
 
 Note that the complementary function solutions are not promising, being multplies of $\frac{1}{r}$ and $r$, so assume in the first instance that the particular integrals represent the actual perturbation (but see Gaussian case below!).
+
+There follow some analytic results for some plausible blob initial conditions.
 
 1. Gaussian blob $n_0 = e^{-\frac{r^2}{2 r_0^2}}$:
 
@@ -70,7 +74,7 @@ $$
 \phi = r_0 B^2 \left ( \frac{r_0 \ln \cosh \left ( \frac{r}{r_0} \right )}{r} - \tanh \left ( \frac{r}{r_0} \right )\right )
 $$
 
-The quadratic term $n = n^(2)t^2$ is easily computed from these using the formula from above $n^{(2)} = \frac{1}{2} \left ( \frac{n_0 \phi^{(1)}}{L} - \frac{n_0'}{Br} \frac{\partial \phi^{(1)}}{\partial \varphi} \right )$.  In each case there is a term $\propto \sin \varphi$ and a term $\propto \cos \varphi$.
+The quadratic term $n = n^{(2)}t^2$ is easily computed from these using the formula from above $n^{(2)} = \frac{1}{2} \left ( \frac{n_0 \phi^{(1)}}{L} - \frac{n_0'}{Br} \frac{\partial \phi^{(1)}}{\partial \varphi} \right )$.  In each case there is a term $\propto \sin \varphi$ and a term $\propto \cos \varphi$.
 
 
 
