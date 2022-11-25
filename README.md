@@ -82,7 +82,7 @@ There follow some plots showing the density evolution.  Note the plots are **not
 
 ![Gaussian_blob](png/blob2d_Gaussian.png "Time-evolution of Gaussian density blob in Hermes-3.")
 
-Note this is different to the Hermes-3 Gaussian as the background density is zero (PLOT NEEDS REDOING!).
+Note this is different to the Hermes-3 documentation's Gaussian as the background density is zero.
 
 **Lorentzian initial condition output**
 
