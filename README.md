@@ -98,10 +98,10 @@ The Hermes-3 example ran as-is:
 
 ![Original_blob](png/blob2d_original.png "Time-evolution of Gaussian density blob in Hermes-3, unmodified example as in docs pages.")
 
-Turning on anomalous diffusion for the electron density and using anomalous_D=2 give the following.  Note what appears to be boundary effect, probably caused by the fact that the blob evolves in a constant background density of 1 and not zero as in my above examples (was this done to make the simulation execute faster - as my examples are an order of magnitude slower to run).
+Turning on anomalous diffusion for the electron density and using anomalous_D=2 (chosen as this is the value in one of the tokamak examples) give the following.  Note what appears to be boundary effect, probably caused by the fact that the blob evolves in a constant background density of 1 and not zero as in my above examples (was this done to make the simulation execute faster - as my examples are an order of magnitude slower to run).
 
 ![original_blob_anomalous_D](png/blob2d_anomalous_D.png "Time-evolution of Gaussian density blob in Hermes-3 with anomalous_D=2 (Hermes-3 example).")
 
-The same anomalous diffusion on the Gaussian blob above (no background density) produces the following plot.  I don't understand the origin of the density minima that seem to be generated ...
+The same anomalous diffusion on the Gaussian blob above (my one with no background density, NOT the Hermes-3 example shown in the immediately-preceding two figures) produces the following plot.  I don't understand the origin of the density minima that seem to be generated ...
 
 ![Gaussian_blob_anomalous_D](png/blob2d_Gaussian2_anomalous_D.png "Time-evolution of Gaussian density blob in Hermes-3 with anomalous_D=2 (my example).")
