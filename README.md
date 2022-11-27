@@ -92,3 +92,12 @@ Note this is different to the Hermes-3 documentation's Gaussian as the backgroun
 
 ![PoeschlTeller_blob](png/blob2d_PoeschlTeller.png "Time-evolution of Poeschl-Teller density blob in Hermes-3.")
 
+**Effect of anomalous diffusion**
+
+The Hermes-3 example ran as-is:
+
+![Original_blob](png/blob2d_original.png "Time-evolution of Gaussian density blob in Hermes-3, unmodified example as in docs pages.")
+
+Turning on anomalous diffusion for the electron density and using anomalous_D=2 give the following.  Note what appears to be boundary effect, probably caused by the fact that the blob evolves in a constant background density of 1 and not zero as in my above examples (was this done to make the simulation execute faster - as my examples are an order of magnitude slower to run).
+
+![Gaussian_blob_anomalous_D](png/blob2d_anomalous_D.png "Time-evolution of Gaussian density blob in Hermes-3 with anomalous_D=2.")
