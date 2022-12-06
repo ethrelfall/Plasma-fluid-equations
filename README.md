@@ -76,7 +76,7 @@ $$
 
 The quadratic term $n = n^{(2)}t^2$ is easily computed from these using the formula from above $n^{(2)} = \frac{1}{2} \left ( \frac{n_0 \phi^{(1)}}{L} - \frac{n_0'}{Br} \frac{\partial \phi^{(1)}}{\partial \varphi} \right )$.  In each case there is a term $\propto \sin \varphi$ and a term $\propto \cos \varphi$.
 
-The initial evolution of the hot fluid blob can be inspected by running the Hermes-3 example with a small value for the diamagnetic drift term, here bxcvz=0.01 (nothing else is changed except the initial data).  The vorticity is shown (called `Vort' in the output script) for the Gaussian blob as used below (my background-free one, not the Hermes-3 example).  The initial state has the expected dipolar form.
+The initial evolution of the hot fluid blob can be inspected by running the Hermes-3 example with a small value for the diamagnetic drift term, here bxcvz=0.01 (nothing else is changed except the initial data).  The vorticity is shown (called `Vort' in the output script) for the Gaussian blob as specified in Example 1. above (my background-free one, not the Hermes-3 example).  The initial state has the expected dipolar form.
 
 ![blob2d_growth](png/blob2d_growth.png "Growth of vorticity for Gaussian density blob in Hermes-3 for small diamagnetic drift.")
 
